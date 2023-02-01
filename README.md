@@ -1,2 +1,2 @@
 # 1-HARD
-questa cartella contiene tutti i miei progetti scolastic.
+questa cartella contiene tutti i miei progetti scolastici 2022-2023

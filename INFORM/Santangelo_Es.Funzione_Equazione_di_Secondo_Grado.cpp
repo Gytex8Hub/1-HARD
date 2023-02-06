@@ -1,5 +1,5 @@
 /*
-    Name:Santangelo_Es.FunzioneMedia
+    Name:Santangelo_Es.Funzione_Equazione_di_Secondo_Grado
     Copyright:Colamonico-Chiarulli
     Author:Gianluigi Santangelo
     Date: 28/09/22 09:39

@@ -20,7 +20,7 @@ int main(){
 int anno;
 //4. input
 
-cout<<"inserisci l'anno epr intero";
+cout<<"inserisci l'anno per intero";
 cin>>anno;
 //5. logica - operazioni - algoritmo
 cout<<IsBisestile(anno);
@@ -34,11 +34,12 @@ return 0;
 }
 bool IsBisestile(int anno){
 	bool annob;
-	string vero;
-	if(anno%100==0 & anno%400==0) {
-		annob=vero;
+	if(anno%100==0 && anno%400==0 || (anno%4==0 && !anno%100!=0)) {
+		annob=true;
 }
-
+else {
+	annob=false;
+}
 	
 	return annob;
 	

@@ -26,7 +26,7 @@ cout<<"inserisci il primo anno ";
 cin>>anno1;
 cout<<"inserisci il secondo anno ";
 cin>>anno2;
-cout
+cout<<"i mesi bisestili sono "<< N_A_Bisestili(anno1,anno2);
 //5. logica - operazioni - algoritmo
 
 
@@ -40,12 +40,15 @@ return 0;
 double N_A_Bisestili(int anno1, int anno2){
 	int annib;
 while(anno1<=anno2) {
-	if(anno1%100==0 anno2%400==0) {
+	if(anno1%100==0 && anno1%400==0 || (anno1%4==0 && anno1%100!=0)) {
 		annib=annib+1;
+		anno1=anno1+1;
+		}
+		else {
+			anno1=anno1+1;
+		}
 		
 }
+ return annib;
 }
-	{
-	}
 	
-}

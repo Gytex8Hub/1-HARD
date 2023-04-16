@@ -12,16 +12,14 @@
 .section h1 {
     text-align: center;
     font-size: 6rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
     padding: 20px;
     margin: 15px;
     z-index: 1;
 }
 
-.video-container {
+.ciao {
     position:absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;
 }

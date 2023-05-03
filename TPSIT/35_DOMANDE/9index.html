@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selettori CSS</title>
+	<style>
+		/* Applicazione del selettore p ~ p con sfondo rosso */
+		p ~ p {
+			background-color: red;
+		}
+
+		/* Applicazione del selettore p + p con testo verde */
+		p + p {
+			color: green;
+		}
+
+		/* Modifica per applicare entrambi i selettori */
+		p ~ p, p + p {
+			background-color: red;
+			color: green;
+		}
+	</style>
+</head>
+<body>
+
+    <p>1° paragrafo</p>
+    <p>2° paragrafo</p>
+    <p>3° paragrafo</p>
+    
+</body>
+</html>

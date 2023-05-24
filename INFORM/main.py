@@ -1,28 +1,72 @@
 import pygame
-from pygame.locals import *
+import os
 
+# inizializza pygame
 pygame.init()
-pygame.display.set_mode((400, 300))
-pygame.display.set_caption('Titolo della finestra')
+
+# dimensioni dello schermo
+screen_width = 800
+screen_height = 600
+
+# imposta lo schermo
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# titolo della finestra
+pygame.display.set_caption("Sfondo infinito scorrevole")
+
+# velocià di scorrimento dello sfondo
+background_speed = 1
+
+# carica lo sfondo
+background_image = pygame.image.load(os.path.join("sfondo.jpg")).convert()
+
+# carica il personaggio
+player_image = pygame.image.load(os.path.join("mario.png")).convert_alpha()
+
+# dimensioni del personaggio
+player_width = player_image.get_width()
+player_height = player_image.get_height()
+
+# posizione del personaggio
+player_x = 100
+player_y = 300
+
+
+# funzione per disegnare lo sfondo
+def draw_background(background_x):
+    screen.blit(background_image, (background_x, 0))
+    screen.blit(background_image, (background_x + screen_width, 0))
+
+
+# loop del gioco
 running = True
+background_x = 0
+
 while running:
+    # gestione eventi
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        if event.type == pygame.KEYDOWN:
-            print("L'utente ha premuto un tasto sulla tastiera")
-            if event.key == K_w:
-                print("L'utente vuole andare avanti")
-            if event.key == K_s:
-                print("L'utente vuole andare indietro")
-            if event.key == K_d:
-                print("L'utente vuole andare a desta")
-            if event.key == K_a:
-                print("L'utente vuole andare a sinistra")
-            if event.key == K_r:
-                print("L'utente vuole ricaricare l'arma")
-            if event.key == K_LSHIFT:
-                print("L'utente si vuole accovacciare")
-            if event.key == K_SPACE:
-                print("L'utente vuole saltare")
+
+    # movimento del personaggio
+    key_pressed = pygame.key.get_pressed()
+    if key_pressed[pygame.K_UP]:
+        player_y -= 5
+    if key_pressed[pygame.K_DOWN]:
+        player_y += 5
+    if key_pressed[pygame.K_LEFT]:
+        player_x -= 5
+    if key_pressed[pygame.K_RIGHT]:
+        player_x += 5
+
+    # disegna lo sfondo
+    draw_background(background_x)
+    background_x -= background_speed
+    if background_x < -screen_width:
+        background_x = 0
+
+    # disegna il personaggio
+    screen.blit(player_image, (player_x, player_y))
+
+    # aggiorna lo schermo
     pygame.display.update()

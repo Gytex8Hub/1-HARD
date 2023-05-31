@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  p {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  
+  p:first-of-type {
+    background-color: pink;
+    color: blue;
+    font-size: 10px;
+    text-align: right;
+  }
+  
+  p:nth-of-type(2) {
+    background-color: black;
+    color: #FFFF00;
+  }
+  
+  .importante {
+    background-color: green;
+    color: blue;
+  }
+  

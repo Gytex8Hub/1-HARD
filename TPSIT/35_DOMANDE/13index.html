@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>domanda 13</title>
+  <style>
+    .rainbow-text {
+      display: inline-block;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function colorizeText() {
+      var text = document.getElementById('text').innerHTML;
+      var coloredText = '';
+      var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+      var colorIndex = 0;
+
+      for (var i = 0; i < text.length; i++) {
+        var color = colors[colorIndex % colors.length];
+        coloredText += '<span style="color: ' + color + '">' + text.charAt(i) + '</span>';
+        colorIndex++;
+      }
+
+      document.getElementById('text').innerHTML = coloredText;
+    }
+  </script>
+</head>
+<body onload="colorizeText()">
+  <p id="text">
+    Gianluigi Santangelo 
+  </p>
+</body>
+</html>

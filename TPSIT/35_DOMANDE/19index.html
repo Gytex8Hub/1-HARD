@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div > .comment:nth-child(even) > em:first-child {
+      background-color: red;
+      color: green;
+      border: 3px dashed yellow;
+      padding: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="comment">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <em>Primo figlio di commento di posto pari</em>
+    </div>
+    <div class="comment">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <em>Primo figlio di commento di posto dispari</em>
+    </div>
+    <div class="comment">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <em>Primo figlio di commento di posto pari</em>
+    </div>
+  </div>
+</body>
+</html>

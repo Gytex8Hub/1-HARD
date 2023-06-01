@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>domanda 24</title>
+    <style>
+        #qwerty tr:first-child {
+            color: green;
+            background-color: red;
+        }
+
+        #qwerty tr:nth-child(even):not(:first-child) {
+            color: white;
+            background-color: green;
+        }
+
+        #qwerty tr:nth-child(odd):not(:first-child) {
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <table id="qwerty">
+        <tr>
+            <th>Intestazione 1</th>
+            <th>Intestazione 2</th>
+            <th>Intestazione 3</th>
+        </tr>
+        <tr>
+            <td>Contenuto 1</td>
+            <td>Contenuto 2</td>
+            <td>Contenuto 3</td>
+        </tr>
+        <tr>
+            <td>Contenuto 4</td>
+            <td>Contenuto 5</td>
+            <td>Contenuto 6</td>
+        </tr>
+        <tr>
+            <td>Contenuto 7</td>
+            <td>Contenuto 8</td>
+            <td>Contenuto 9</td>
+        </tr>
+    </table>
+</body>
+</html>

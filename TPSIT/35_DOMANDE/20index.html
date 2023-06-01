@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>domanda 20</title>
+    <style>
+        body {
+            counter-reset: paragraph;
+        }
+
+        p:before {
+            counter-increment: paragraph;
+            content: counter(paragraph)".";
+            color: green;
+            font-size: 2em;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Primo paragrafo.</p>
+    <p>Secondo paragrafo.</p>
+    <p>Terzo paragrafo.</p>
+    <p>Quarto paragrafo.</p>
+    <p>Quinto paragrafo.</p>
+    <p>Sesto paragrafo.</p>
+</body>
+</html>
